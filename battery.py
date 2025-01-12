@@ -138,7 +138,7 @@ if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)
     res = get_battery()
     menu = pystray.Menu(
-        pystray.MenuItem(lambda _ : f'Mouse Battery: {round(get_battery(), 0)}%', lambda: f'Battery Level: {round(res, 0)}%'),
+        pystray.MenuItem(lambda _ : f'Mouse Battery: {int(res)}%', lambda: f'Battery Level: {int(res)}%'),
         pystray.MenuItem('Exit', lambda _: icon.stop())
         )
     icon = pystray.Icon(
